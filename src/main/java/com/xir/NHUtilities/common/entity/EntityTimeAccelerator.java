@@ -86,7 +86,7 @@ public class EntityTimeAccelerator extends Entity {
     @Override
     public void onEntityUpdate() {
         if (this.worldObj.isRemote) return;
-        if (remainingTime-- > 0) this.tAccelerate();
+        if (remainingTime > 0) this.tAccelerate();
         if (remainingTime <= 0) this.setDead();
     }
 
